@@ -1,0 +1,81 @@
+$date
+	Wed Oct 07 15:17:29 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module ripple_carry_adder_tb $end
+$var wire 4 ! SUM [3:0] $end
+$var wire 1 " COUT $end
+$var reg 4 # A [3:0] $end
+$var reg 4 $ B [3:0] $end
+$var reg 1 % CIN $end
+$scope module uut $end
+$var wire 4 & A [3:0] $end
+$var wire 4 ' B [3:0] $end
+$var wire 1 % CIN $end
+$var reg 1 " COUT $end
+$var reg 4 ( SUM [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 (
+b0 '
+b0 &
+0%
+b0 $
+b0 #
+0"
+b0 !
+$end
+#10000
+b11 !
+b11 (
+b10 $
+b10 '
+b1 #
+b1 &
+#20000
+b111 !
+b111 (
+b100 $
+b100 '
+b11 #
+b11 &
+#30000
+b1000 !
+b1000 (
+b11 $
+b11 '
+b101 #
+b101 &
+#40000
+b1 $
+b1 '
+b111 #
+b111 &
+#50000
+1"
+b0 !
+b0 (
+b1111 #
+b1111 &
+#60000
+1%
+b101 $
+b101 '
+b1010 #
+b1010 &
+#70000
+b1111 !
+b1111 (
+b1111 $
+b1111 '
+b1111 #
+b1111 &
+#80000

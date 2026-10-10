@@ -1,0 +1,68 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-965-g55e06db6)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000000000111a150 .scope module, "xnor_gate_tb" "xnor_gate_tb" 2 3;
+ .timescale -9 -12;
+v000000000111bb10_0 .var "A", 0 0;
+v000000000111bbb0_0 .var "B", 0 0;
+v0000000001165a50_0 .net "Y", 0 0, L_0000000001164300;  1 drivers
+S_000000000111b8e0 .scope module, "uut" "xnor_gate" 2 9, 3 1 0, S_000000000111a150;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /OUTPUT 1 "Y";
+L_00000000011333a0 .functor XOR 1, v000000000111bb10_0, v000000000111bbb0_0, C4<0>, C4<0>;
+L_0000000001164300 .functor NOT 1, L_00000000011333a0, C4<0>, C4<0>, C4<0>;
+v00000000011335c0_0 .net "A", 0 0, v000000000111bb10_0;  1 drivers
+v00000000011337e0_0 .net "B", 0 0, v000000000111bbb0_0;  1 drivers
+v0000000001155550_0 .net "Y", 0 0, L_0000000001164300;  alias, 1 drivers
+v000000000111ba70_0 .net *"_ivl_0", 0 0, L_00000000011333a0;  1 drivers
+    .scope S_000000000111a150;
+T_0 ;
+    %vpi_call 2 17 "$dumpfile", "xnor_gate.vcd" {0 0 0};
+    %vpi_call 2 18 "$dumpvars", 32'sb00000000000000000000000000000000, S_000000000111a150 {0 0 0};
+    %vpi_call 2 20 "$display", "================================" {0 0 0};
+    %vpi_call 2 21 "$display", "       XNOR GATE TRUTH TABLE" {0 0 0};
+    %vpi_call 2 22 "$display", "================================" {0 0 0};
+    %vpi_call 2 23 "$display", " Time(ns)   A   B   Y" {0 0 0};
+    %vpi_call 2 24 "$display", "--------------------------------" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000000000111bb10_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000000000111bbb0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 28 "$display", "   %0t      %b   %b   %b", $time, v000000000111bb10_0, v000000000111bbb0_0, v0000000001165a50_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000000000111bb10_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000000000111bbb0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 32 "$display", "   %0t      %b   %b   %b", $time, v000000000111bb10_0, v000000000111bbb0_0, v0000000001165a50_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000000000111bb10_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000000000111bbb0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 36 "$display", "   %0t      %b   %b   %b", $time, v000000000111bb10_0, v000000000111bbb0_0, v0000000001165a50_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000000000111bb10_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000000000111bbb0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 40 "$display", "   %0t      %b   %b   %b", $time, v000000000111bb10_0, v000000000111bbb0_0, v0000000001165a50_0 {0 0 0};
+    %vpi_call 2 42 "$display", "================================" {0 0 0};
+    %vpi_call 2 44 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "xnor_gate_tb.v";
+    "xnor_gate.v";
